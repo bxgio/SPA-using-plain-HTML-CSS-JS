@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Doers Tech</h1>
+     
+    </header>
+
+    <nav>
+        <a onclick="showContent('dashboard')">Dashboard</a>
+        <a onclick="showContent('About')">About</a>
+        <a onclick="showContent('Contact')">Contact</a>
+        <a onclick="showContent('Login')">Login</a>
+        <!-- Add more topics as needed -->
+    </nav>
+
+    <div class="content">
+        <div id="dashboard" class="hidden">
+            <h2>Our Services</h2>
+            <div class="card">
+                <img src="images/img2.jpg">
+                <div class="card-text">
+                    <p>Providing AI and ML services</p>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="images/img1.jpg" >
+                <div class="card-text">
+                    <p>Providing IT and Technical support</p>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="images/img3.jpg">
+                <div class="card-text">
+                    <p>providing Networking Services</p>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="images/img4.jpg">
+                <div class="card-text">
+                    <p>Providing good Mobile applications</p>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="images/img5.jpg">
+                <div class="card-text">
+                    <p>Providing good web applications</p>
+                </div>
+                
+            </div>
+        </div>
+        <div id="About" class="hidden">
+            <h2>About Us</h2>
+            <p>
+                Doers Tech is your one-stop destination for cutting-edge technology solutions that empower businesses to thrive in the digital age. Our dynamic team of skilled professionals is dedicated to providing a comprehensive suite of services, ranging from bespoke website development to unparalleled technical support, and innovative mobile services. With a commitment to excellence, we leverage the latest advancements in IT to ensure your business stays ahead in the competitive landscape. At Doers Tech, we understand the diverse needs of our clients and tailor our services to deliver customized solutions that align with your goals. Whether you are looking to establish a strong online presence, enhance your IT infrastructure, or optimize mobile applications, we are your trusted partner in achieving technological excellence. Our passion for innovation, coupled with a customer-centric approach, sets us apart as a reliable ally for businesses seeking to harness the full potential of technology for sustained success. Embrace the future of digital transformation with Doers Tech - where your vision meets our expertise!
+            </p>
+        </div>
+        <div id="Contact" class="hidden">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="Login" class="hidden">
+            <h2>Login</h2>
+            <form id="loginForm" action="#" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+        
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+        
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+        
+        
+        
+    </div>
+
+    <script>
+        function showContent(topicId) {
+            var topics = document.querySelectorAll('.content > div');
+            topics.forEach(function (topic) {
+                topic.classList.add('hidden');
+            });
+
+            var selectedTopic = document.getElementById(topicId);
+            if (selectedTopic) {
+                selectedTopic.classList.remove('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
